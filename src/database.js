@@ -1,6 +1,6 @@
 const mongoose= require('mongoose');
 
-const URI='mongodb://localhost/merstack';
+const URI=process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb://localhost/databasesetest';
 
 mongoose.connect(URI, {
     useNewUrlParser: true,
