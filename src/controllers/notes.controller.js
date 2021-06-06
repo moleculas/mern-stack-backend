@@ -6,7 +6,7 @@ notesCtrl.getNotes = async (req, res) => {
     res.json(notes)
 };
 notesCtrl.getNote = async (req, res) => {
-    const note = await Note.finfById(req.params.id);
+    const note = await Note.findById(req.params.id);
     res.json(note);
 };
 notesCtrl.createNote = async (req, res) => {
